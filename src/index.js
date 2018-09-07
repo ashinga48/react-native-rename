@@ -100,9 +100,9 @@ readFile(path.join(__dirname, 'android/app/src/main/res/values/strings.xml'))
           );
         }
 
-        if (newName === currentAppName || newName === nS_CurrentAppName || newName === lC_Ns_CurrentAppName) {
-          return console.log('Please try a different name.');
-        }
+//         if (newName === currentAppName || newName === nS_CurrentAppName || newName === lC_Ns_CurrentAppName) {
+//           return console.log('Please try a different name.');
+//         }
 
         // Move files and folders from ./config/foldersAndFiles.js
         const resolveFoldersAndFiles = new Promise(resolve => {
@@ -256,7 +256,7 @@ readFile(path.join(__dirname, 'android/app/src/main/res/values/strings.xml'))
         const rename = () => {
           resolveFoldersAndFiles
             .then(resolveFilesToModifyContent)
-            .then(resolveJavaFiles)
+            //.then(resolveJavaFiles)
             .then(resolveBundleIdentifiers)
             .then(deletePreviousBundleDirectory)
             .then(cleanBuilds)
